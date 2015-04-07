@@ -7,8 +7,8 @@
 
 {
 "locale": {
-"latitude": "10.29393933",
-"longitude": "10.29393933"
+"latitude": 10.29393933,
+"longitude": 10.29393933
 },
 "phase": 1,
 "liceType": 1,
