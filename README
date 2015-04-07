@@ -2,3 +2,18 @@ This is your new Play application
 =================================
 
 This file will be packaged with your application, when using `activator dist`.
+
+# 公開API
+
+## 田んぼ情報登録
+リクエストJSON
+
+{
+  "locale": {
+    "latitude": "10.29393933",
+    "longitude": "10.29393933"
+  },
+  "phase": 1,
+  "lice_type": 1,
+  "doneDate": "2015-01-01T10:00:00"
+}
