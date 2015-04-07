@@ -11,6 +11,6 @@
 "longitude": "10.29393933"
 },
 "phase": 1,
-"lice_type": 1,
+"liceType": 1,
 "doneDate": "2015-01-01T10:00:00"
 }
