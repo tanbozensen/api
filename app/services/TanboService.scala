@@ -1,8 +1,29 @@
 package services
 
+import models.Tanbo
 import play.api.Play.current
-import models._
+import play.api.db.slick.Config.driver.simple._
+import play.api.db.slick.DB
+import models.TanboDAO
 
 object TanboService {
-
+  
+  /**
+   * 田んぼ情報の作戦
+   */
+  def create (tanbo : Tanbo) : Option[Tanbo] = {
+    DB.withSession { implicit session => 
+      val id = TanboDAO.create(tanbo)(session)
+      return TanboDAO.searchByID(id)(session)
+    }
+  }
+  
+  /**
+   * 全タバコの取得
+   */
+  def getAll: List[Tanbo] = {
+    DB.withSession { implicit session => 
+      return TanboDAO.searchAll(session)
+    }
+  }
 }

@@ -1,21 +1,11 @@
-# Users スキーマ
- 
+# --- Created by Slick DDL
+# To stop Slick DDL generation, remove this comment and start using Evolutions
+
 # --- !Ups
-CREATE TABLE locale (
-    id  bigserial primary key,
-    latitude int NOT NULL,
-    longitude int NOT NULL
-);
- 
-CREATE TABLE tanbo (
-    id  bigserial PRIMARY KEY,
-    locale_id  bigint references locale(id),
-    liceType int NOT NULL,
-    phase int NOT NULL,
-    doneDate date NOT NULL
-);
- 
+
+create table "tanbo" ("id" BIGSERIAL NOT NULL PRIMARY KEY,"liceType" INTEGER NOT NULL,"phase" INTEGER NOT NULL,"doneDate" VARCHAR(254) NOT NULL,"latitude" DOUBLE PRECISION NOT NULL,"longitude" DOUBLE PRECISION NOT NULL);
+
 # --- !Downs
- 
-DROP TABLE locale;
-DROP TABLE tanbo;
+
+drop table "tanbo";
+
