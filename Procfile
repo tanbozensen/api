@@ -1,1 +1,1 @@
-web: target/universal/stage/bin/api -Dconfig.resource=prod.conf
+web: target/universal/stage/bin/api  -Dhttp.port=${PORT} -Dconfig.resource=prod.conf
