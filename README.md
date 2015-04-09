@@ -1,16 +1,19 @@
 # 田んぼ前線サーバーサイドAPI
 
+# Root URL
+http://tanbozensen.herokuapp.com
+
 ## 公開API
 
 ### 田んぼ情報登録
 
-*Request
+#### Request
 
-**URL
+##### URL
 
 POST /api/tanbos/
 
-**JSON
+##### JSON
 
 ""
 {
@@ -30,13 +33,13 @@ POST /api/tanbos/
 |phase|Number|0:ささにしき、1:こしひかり|
 |phase|String|YYYY-MM-DD形式|
 
-*Reply
+#### Reply
 
-**StatusCode
+##### StatusCode
 
 201 Created
 
-**JSON
+##### JSON
 
 ""
 {
@@ -51,26 +54,23 @@ POST /api/tanbos/
 
 ### 田んぼ情報一覧取得
 
-*Request
+#### Request
 
-**URL
+##### URL
 
 GET /api/tanbos?year=xxxx
 
-** Request Param
 |param|説明|
 |:-----------|:------------|
 |year|yyyy指定|
 
-*Reply
+#### Reply
 
-**StatusCode
+##### StatusCode
 
-201 Created
+200 OK
 
-** リプライJSON
-
-**JSON
+##### JSON
 
 ""
 [
