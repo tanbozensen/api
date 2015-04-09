@@ -1,1 +1,1 @@
-web: web: target/universal/stage/bin/api ${JAVA_OPTS} -Dconfig.resource=prod.conf
+web: target/universal/stage/bin/api ${JAVA_OPTS} -Dconfig.resource=prod.conf
