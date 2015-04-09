@@ -4,13 +4,13 @@
 
 ### 田んぼ情報登録
 
-* Request
+*Request
 
-** URL
+**URL
 
 POST /api/tanbos/
 
-** JSON
+**JSON
 
 ""
 {
@@ -30,13 +30,13 @@ POST /api/tanbos/
 |phase|Number|0:ささにしき、1:こしひかり|
 |phase|String|YYYY-MM-DD形式|
 
-* Reply
+*Reply
 
-** StatusCode
+**StatusCode
 
 201 Created
 
-** JSON
+**JSON
 
 ""
 {
@@ -51,9 +51,9 @@ POST /api/tanbos/
 
 ### 田んぼ情報一覧取得
 
-* Request
+*Request
 
-** URL
+**URL
 
 GET /api/tanbos?year=xxxx
 
@@ -62,15 +62,15 @@ GET /api/tanbos?year=xxxx
 |:-----------|:------------|
 |year|yyyy指定|
 
-* Reply
-* 
-** StatusCode
+*Reply
+
+**StatusCode
 
 201 Created
 
 ** リプライJSON
 
-** JSON
+**JSON
 
 ""
 [
