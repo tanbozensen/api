@@ -41,7 +41,7 @@ POST /api/tanbos/
 
 ##### JSON
 
-""
+>
 {
 "id" : 1
 "latitude": 10.29393933,
@@ -50,7 +50,6 @@ POST /api/tanbos/
 "lice_type": 1,
 "doneDate": "2015-01-01"
 }
-""
 
 ### 田んぼ情報一覧取得
 
@@ -72,7 +71,7 @@ GET /api/tanbos?year=xxxx
 
 ##### JSON
 
-""
+>
 [
 {
 "id" : 1
@@ -84,4 +83,4 @@ GET /api/tanbos?year=xxxx
 },
 ...
 ]
-""
+
