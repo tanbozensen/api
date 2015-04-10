@@ -20,7 +20,7 @@ POST /api/tanbos/
 "latitude": 10.29393933,
 "longitude": 129.29393933,
 "phase": 1,
-"lice_type": 1,
+"rice_type": 1,
 "doneDate": "2015-01-01"
 }
 ""
@@ -30,8 +30,8 @@ POST /api/tanbos/
 |latitude|Number|緯度|
 |longitude|Number|軽度|
 |phase|Number|0:田植え、1:稲刈り|
-|phase|Number|0:ささにしき、1:こしひかり|
-|phase|String|YYYY-MM-DD形式|
+|rice_type|Number|0:ささにしき、1:こしひかり|
+|doneDate|String|YYYY-MM-DD形式|
 
 #### Reply
 
@@ -47,7 +47,7 @@ POST /api/tanbos/
 "latitude": 10.29393933,
 "longitude": 129.29393933,
 "phase": 1,
-"lice_type": 1,
+"rice_type": 1,
 "doneDate": "2015-01-01"
 }
 
@@ -78,7 +78,7 @@ GET /api/tanbos?year=xxxx
 "latitude": 10.29393933,
 "longitude": 129.29393933,
 "phase": 1,
-"lice_type": 1,
+"rice_type": 1,
 "doneDate": "2015-01-01"
 },
 ...
