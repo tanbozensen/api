@@ -9,7 +9,7 @@ import play.api.db.slick._
  */
 case class Tanbo(
   id: Option[Long],
-  riceType: Int,
+  riceType: Option[Int],
   phase: Int,
   doneDate: String,
   latitude: Double,
@@ -17,12 +17,12 @@ case class Tanbo(
 
 class Tanbos(tag: Tag) extends Table[Tanbo](tag, "tanbo") {
   def id = column[Long]("id", O.PrimaryKey, O.AutoInc)
-  def riceType = column[Int]("riceType", O.NotNull)
+  def riceType = column[Int]("riceType", O.Nullable)
   def phase = column[Int]("phase", O.NotNull)
   def doneDate = column[String]("doneDate", O.NotNull)
   def latitude = column[Double]("latitude", O.NotNull)
   def longitude = column[Double]("longitude", O.NotNull)
-  def * = (id.?, riceType, phase, doneDate, latitude, longitude) <> ((Tanbo.apply _).tupled, Tanbo.unapply)
+  def * = (id.?, riceType.?, phase, doneDate, latitude, longitude) <> ((Tanbo.apply _).tupled, Tanbo.unapply)
 }
 
 object TanboDAO {
