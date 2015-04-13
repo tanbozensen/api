@@ -8,17 +8,16 @@ import play.api.mvc.Action
 import play.api.mvc.Controller
 import models.TanboDAO
 import services.TanboService
+import com.github.tototoshi.play.json.JsonNaming
 
 object TanboController extends Controller {
-  implicit val tanboReads = Json.format[Tanbo]
+  implicit val tanboFormat = JsonNaming.snakecase(Json.format[Tanbo])
 
   def post = Action(parse.json) { request =>
     {
       request.body.validate[Tanbo].map { dto =>
-        // オッケーの場合は更新済みのオブジェクトを返す
         Created(Json.toJson(TanboService.create(dto)))
       }.recoverTotal { e =>
-        // バリデーションエラーを返す
         BadRequest(Json.obj("error" -> JsError.toFlatJson(e)))
       }
     }

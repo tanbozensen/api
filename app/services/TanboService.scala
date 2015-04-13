@@ -9,7 +9,7 @@ import models.TanboDAO
 object TanboService {
   
   /**
-   * 田んぼ情報の作戦
+   * 田んぼ情報の作成
    */
   def create (tanbo : Tanbo) : Option[Tanbo] = {
     DB.withSession { implicit session => 
@@ -19,7 +19,7 @@ object TanboService {
   }
   
   /**
-   * 全タバコの取得
+   * 全田んぼの取得
    */
   def getAll: List[Tanbo] = {
     DB.withSession { implicit session => 
