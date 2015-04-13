@@ -15,15 +15,15 @@ POST /api/tanbos/
 
 ##### JSON
 
-""
+>
 {
 "latitude": 10.29393933,
 "longitude": 129.29393933,
 "phase": 1,
 "rice_type": 1,
-"doneDate": "2015-01-01"
+"done_date": "2015-01-01"
 }
-""
+
 
 |param|型|説明|
 |:-----------|:------------|:------------|
@@ -31,7 +31,7 @@ POST /api/tanbos/
 |longitude|Number|軽度|
 |phase|Number|0:田植え、1:稲刈り|
 |rice_type|Number|0:ささにしき、1:こしひかり|
-|doneDate|String|YYYY-MM-DD形式|
+|done_date|String|YYYY-MM-DD形式|
 
 #### Reply
 
@@ -48,7 +48,7 @@ POST /api/tanbos/
 "longitude": 129.29393933,
 "phase": 1,
 "rice_type": 1,
-"doneDate": "2015-01-01"
+"done_date": "2015-01-01"
 }
 
 ### 田んぼ情報一覧取得
