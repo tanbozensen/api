@@ -5,6 +5,7 @@
 # Home page
 GET     /                           controllers.Application.index
 POST     /api/tanbos/                controllers.TanboController.post
+POST     /api/tanbos                controllers.TanboController.post
 GET     /api/tanbos/                controllers.TanboController.get
 GET     /api/tanbos                controllers.TanboController.get
 
