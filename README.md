@@ -30,7 +30,7 @@ POST /api/tanbos/
 |latitude|Number|緯度|
 |longitude|Number|軽度|
 |phase|Number|0:田植え、1:稲刈り|
-|rice_type|Number|0:ささにしき、1:こしひかり|
+|rice_type|Number|0:選択なし,1:コシヒカリ,2:ヒノヒカリ,3:ひとめぼれ,4:あきたこまち,5:キヌヒカリ,6:はえぬき, 7:きらら３９７,8:つがるロマン,9:ななつぼし,10:ササニシキ,11:その他|
 |done_date|String|YYYY-MM-DD形式|
 
 #### Reply
