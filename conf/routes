@@ -4,10 +4,12 @@
 
 # Home page
 GET     /                           controllers.Application.index
-POST     /api/tanbos/                controllers.TanboController.post
-POST     /api/tanbos                controllers.TanboController.post
+POST    /api/tanbos/               controllers.TanboController.post
+POST    /api/tanbos                controllers.TanboController.post
 GET     /api/tanbos/                controllers.TanboController.get
-GET     /api/tanbos                controllers.TanboController.get
+GET     /api/tanbos                  controllers.TanboController.get
+DELETE    /api/tanbos/:id/             controllers.TanboController.delete(id: Long)
+DELETE    /api/tanbos/:id              controllers.TanboController.delete(id: Long)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

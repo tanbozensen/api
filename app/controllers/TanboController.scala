@@ -22,10 +22,18 @@ object TanboController extends Controller {
       }
     }
   }
-  
+
   def get = Action { request =>
     {
       Ok(Json.toJson(TanboService.getAll))
     }
   }
+
+  def delete(id: Long) = Action { request =>
+    {
+      TanboService.delete(id)
+      Ok("deleted");
+    }
+  }
+
 }

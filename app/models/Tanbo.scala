@@ -13,7 +13,9 @@ case class Tanbo(
   phase: Int,
   doneDate: String,
   latitude: Double,
-  longitude: Double)
+  longitude: Double,
+  areaUnderTillage: Option[Double]
+)
 
 class Tanbos(tag: Tag) extends Table[Tanbo](tag, "tanbo") {
   def id = column[Long]("id", O.PrimaryKey, O.AutoInc)
@@ -22,7 +24,8 @@ class Tanbos(tag: Tag) extends Table[Tanbo](tag, "tanbo") {
   def doneDate = column[String]("doneDate", O.NotNull)
   def latitude = column[Double]("latitude", O.NotNull)
   def longitude = column[Double]("longitude", O.NotNull)
-  def * = (id.?, riceType.?, phase, doneDate, latitude, longitude) <> ((Tanbo.apply _).tupled, Tanbo.unapply)
+  def areaUnderTillage = column[Double]("areaUnderTillage", O.Nullable)
+  def * = (id.?, riceType.?, phase, doneDate, latitude, longitude, areaUnderTillage.?) <> ((Tanbo.apply _).tupled, Tanbo.unapply)
 }
 
 object TanboDAO {
@@ -64,7 +67,7 @@ object TanboDAO {
    * 削除
    * @param tanbo
    */
-  def remove(tanbo: Tanbo)(implicit s: Session) {
-    tanboQuery.filter(_.id === tanbo.id).delete
+  def removeById(id: Long)(implicit s: Session) {
+    tanboQuery.filter(_.id === id).delete
   }
 }

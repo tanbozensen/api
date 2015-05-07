@@ -26,4 +26,13 @@ object TanboService {
       return TanboDAO.searchAll(session)
     }
   }
+  
+  /**
+   * 全田んぼの削除
+   */
+  def delete(id: Long) = {
+    DB.withSession { implicit session => 
+      TanboDAO.removeById(id)(session)
+    }
+  }
 }
