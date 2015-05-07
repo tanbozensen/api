@@ -32,7 +32,7 @@ object TanboController extends Controller {
   def delete(id: Long) = Action { request =>
     {
       TanboService.delete(id)
-      Ok("deleted");
+      Ok("");
     }
   }
 
