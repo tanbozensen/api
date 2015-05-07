@@ -1,6 +1,6 @@
 # --- !Ups
-ALTER TABLE "tanbo" ADD COLUMN areaUnderTillage "longitude" DOUBLE PRECISION DEFAULT NULL;
+ALTER TABLE "tanbo" ADD COLUMN "areaUnderTillage" DOUBLE PRECISION DEFAULT NULL;
 
 # --- !Downs
 
-ALTER TABLE  "tanbo" DELETE COLUMN areaUnderTillage;
+ALTER TABLE  "tanbo" DROP COLUMN "areaUnderTillage";
