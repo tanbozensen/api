@@ -29,7 +29,7 @@ object TanboController extends Controller {
     }
   }
 
-  def delete(id: Long) = Action { request =>
+  def delete(id: Long) = Action(parse.empty) { request =>
     {
       TanboService.delete(id)
       Ok("");
