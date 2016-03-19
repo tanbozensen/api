@@ -15,7 +15,7 @@ POST /api/tanbos/
 
 ##### JSON
 
->
+``` javascript
 {
 "latitude": 10.29393933,
 "longitude": 129.29393933,
@@ -24,7 +24,7 @@ POST /api/tanbos/
 "doneDate": "2015-01-01",
 "area_under_tillage": 129.29393933
 }
-
+```
 
 |param|型|説明|
 |:-----------|:------------|:------------|
@@ -43,7 +43,7 @@ POST /api/tanbos/
 
 ##### JSON
 
->
+``` javascript
 {
 "id" : 1
 "latitude": 10.29393933,
@@ -53,6 +53,7 @@ POST /api/tanbos/
 "doneDate": "2015-01-01",
 "area_under_tillage": 129.29393933
 }
+```
 
 ### 田んぼ情報一覧取得
 
@@ -74,7 +75,7 @@ GET /api/tanbos?year=xxxx
 
 ##### JSON
 
->
+``` javascript
 [
 {
 "id" : 1
@@ -87,6 +88,7 @@ GET /api/tanbos?year=xxxx
 },
 ...
 ]
+```
 
 ### 田んぼ情報削除
 
